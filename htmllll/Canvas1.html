@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Piłeczka</title>
+
+    <style>
+        h1, h2 {
+            color: black;
+            text-align: center;
+        }
+        /*h2{
+            text-align:center;
+        }*/
+    </style>
+    <link href="styl_uklad.css" type="text/css" rel="stylesheet" />
+    <link href="menu.css" type="text/css" rel="stylesheet" />
+
+    <style>
+        canvas {
+            background-color: white;
+            border: 1px dashed darkmagenta;
+        }
+    </style>
+
+    <script>
+        var context;
+        var x = 100;
+        var y = 200;
+        var dx = 5;
+        var dy = 5;
+        function init() {
+            context = plotno.getContext('2d');
+            setInterval(draw, 10);
+        }
+        function draw() {
+            context.clearRect(0, 0, 500, 500);
+            context.beginPath();
+            context.fillStyle = "#0000ff";
+            context.arc(x, y, 20, 0, Math.PI * 2, true);
+            context.closePath();
+            context.fill();
+            if (x < 0 || x > 500) dx = -dx;
+            if (y < 0 || y > 500) dy = -dy;
+            x += dx; y += dy;
+        }
+
+    </script>
+
+</head>
+<body onLoad="init();">
+    <center> <header><h1> Polska Siatkówka</h1> </header> </center>
+    <nav>
+        <h2 style="color:black"> Menu </h2>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li>
+                <a href="http://www.put.poznan.pl" target="_blank">
+                    Strona PP
+                </a>
+            </li>
+
+            <li><a href="artykul.html">Artykuł</a></li>
+            <li><a href="tabelaPL.html">Tabela PlusLiga</a></li>
+            <li><a href="formularz.html">Formularz</a></li>
+
+            <li><a href="Informacje o nas.html">Informacje o nas</a></li>
+            <li><a href="MAP.html">Znacznik MAP</a></li>
+            <li><a href="Prezentacja.html">Prezentacja</a></li>
+            <li><a href="Specjalisci.html">Nasi specjaliści</a></li>
+            <li><a href="Sponsorzy.html">Sponsorzy PlusLiga</a></li>
+            <li><a href="Canvas1.html">Latająca piłeczka</a></li>
+        </ul>
+
+    </nav>
+    <article>
+
+
+        <canvas id="plotno" width="550" height="350"></canvas>
+
+    </article>
+
+    <aside> <iframe src="kontrolkiJS.html"></iframe>  </aside>
+    <footer>
+        Igor Kabat, 149390, EN1-L1, <br /><br />
+        igor.kabat@student.put.poznan.pl
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Formularz</title>
+
+    <style>
+        h1, h2 {
+            color: black;
+            text-align: center;
+        }
+        /*h2{
+            text-align:center;
+        }*/
+    </style>
+    <link href="styl_uklad.css" type="text/css" rel="stylesheet" />
+    <link href="formularz.css" rel="stylesheet" />
+    <link href="menu.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1> Polska Siatkówka</h1>
+        <center>  </center>
+        <nav>
+            <h2 style="color:black; background-color:#FFFFCC"> Menu </h2>
+            <ul>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li>
+                    <a href="http://www.put.poznan.pl" target="_blank">
+                        Strona PP
+                    </a>
+                </li>
+
+                <li><a href="artykul.html">Artykuł</a></li>
+                <li><a href="tabelaPL.html">Tabela PlusLiga</a></li>
+                <li><a href="formularz.html">Formularz</a></li>
+
+                <li><a href="Informacje o nas.html">Informacje o nas</a></li>
+                <li><a href="MAP.html">Znacznik MAP</a></li>
+                <li><a href="Prezentacja.html">Prezentacja</a></li>
+                <li><a href="Specjalisci.html">Nasi specjaliści</a></li>
+                <li><a href="Sponsorzy.html">Sponsorzy PlusLiga</a></li>
+                <li><a href="Canvas1.html">Latająca piłeczka</a></li>
+            </ul>
+
+        </nav>
+        <article>
+            <h2>Formularz zainteresowania polską siatkówką</h2>
+            <form action="mailto:igor.kabat@student.put.poznan.pl"
+                  method="post">
+
+                <p>
+
+                    Obowiązkowe pola oznaczono znakiem <em>*</em>
+                </p>
+                <fieldset>
+
+                    <legend>Dane kontaktowe</legend>
+                    <label for="płeć"> Płeć: </label>
+                    <select id="płeć" name="płeć">
+                        <option value="kobieta"> Kobieta </option>
+                        <option value="mężczyzna"> Mężczyzna </option>
+
+                    </select>
+                    <br />
+                    <label for="imie"> Imię<em>*</em>: </label>
+                    <input type="text" name="imie" id="imie" autofocus
+                           placeholder="podaj swoje imię" required /> <br />
+
+                    <label for="nazwisko"> Nazwisko: </label>
+                    <input type="text" name="nazwisko" id="nazwisko" /><br />
+
+                    <label for="telefon">Nr telefonu: </label>
+                    <input type="tel" name="telefon" id="telefon"
+                           placeholder="(+48) xxx-xxx-xxx" required /><br />
+
+                    <label for="mail"> E-mail: </label>
+                    <input type="email" name="mail" id="mail" required /> <br />
+                </fieldset>
+                <fieldset>
+                    <legend>Jak często ogląda Pan/i mecze polskich klubów lub reprezentacji w siatkówkę?</legend>
+                    <label>
+                        <input type="checkbox" name="Raz w miesiącu" id="Raz w miesiącu" />Raz w miesiącu
+                    </label><br />
+                    <label>
+                        <input type="checkbox" name="2-5 razy w miesiącu" id="2-5 razy w miesiącu" />2-5 razy w miesiącu
+                    </label><br />
+                    <label>
+                        <input type="checkbox" name="Więcej niż 5 razy w miesiącu" id="Więcej niż 5 razy w miesiącu" />Więcej niż 5 razy w miesiącu
+                    </label><br />
+                    <label>
+                        <input type="checkbox" name="Nigdy" id="Nigdy" />Nigdy
+                    </label><br />
+
+                </fieldset>
+                <fieldset>
+                    <legend>Dane do spisu kibiców</legend>
+
+                    <label for="miasto"> Miasto<em>*</em>: </label>
+                    <input type="text" name="miasto" id="miasto" autofocus
+                           required /> <br />
+                    <label for="Kod"> Kod pocztowy<em>*</em>: </label>
+                    <input type="text" name="Kod" id="Kod" autofocus
+                           required placeholder="00-000" /> <br />
+                    <label for="Ulica"> Ulica: </label>
+                    <input type="text" name="Ulica" id="Ulica" autofocus
+                           required /> <br />
+
+                    <label for="nr"> Nr domu: </label>
+                    <input type="number" name="nr" id="nr" autofocus
+                           required /> <br />
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ile razy tygodniowo trenuje Pan/i siatkówkę</legend>
+                    <label for="ilosc"> Ilość treningów: </label><br />
+                    <input type="radio" id="ilosc" name="ilosc" /> 0 <br />
+                    <input type="radio" id="ilosc" name="ilosc" checked /> 1 <br />
+                    <input type="radio" id="ilosc" name="ilosc" /> 2 <br />
+                    <input type="radio" id="ilosc" name="ilosc" /> 3 <br />
+                    <input type="radio" id="ilosc" name="ilosc" /> 4 i więcej  <br />
+
+                    <br />
+                    <label for="ulub"> Miejsce do wpisania ulubionego klubu oraz zawodnika: </label><br />
+                    <textarea cols="30" rows="10">  </textarea>
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Wyślij formularz" />
+                    <input type="reset" value="Kasuj formularz" />
+                </p>
+            </form>
+
+        </article>
+
+    </header>
+    <aside> <iframe src="kontrolkiJS.html"></iframe>  </aside>
+    <footer>
+        Igor Kabat, 149390, EN1-L1, <br /><br />
+        igor.kabat@student.put.poznan.pl <br />
+    </footer>
+
+</body>
+</html>
